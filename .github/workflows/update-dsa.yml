@@ -1,0 +1,50 @@
+name: Update DSA Progress
+
+on:
+  push:
+    paths:
+      - 'dsa-data.json'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-portfolio:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Validate JSON data
+      run: |
+        node -e "
+          try {
+            const data = JSON.parse(require('fs').readFileSync('dsa-data.json', 'utf8'));
+            console.log('✅ JSON is valid');
+            console.log('📊 Total problems:', data.totalProblems);
+            console.log('📅 Last updated:', data.lastUpdated);
+          } catch (e) {
+            console.error('❌ Invalid JSON:', e.message);
+            process.exit(1);
+          }
+        "
+        
+    - name: Deploy to portfolio (if needed)
+      run: |
+        echo "🚀 DSA data updated successfully!"
+        echo "📈 New problem count: $(node -e "console.log(JSON.parse(require('fs').readFileSync('dsa-data.json', 'utf8')).totalProblems)")"
+        echo "🔄 Your portfolio will automatically fetch this data within 24 hours"
+        
+    - name: Notify success
+      run: |
+        echo "🎉 DSA progress updated successfully!"
+        echo "📊 Check your portfolio to see the changes"
+
+

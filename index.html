@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Gaurav</title>
+    <meta name="description" content="Backend Developer specializing in Java, JavaScript, Node.js, and Express.js. Student developer passionate about building robust web applications.">
+    <meta name="author" content="Gaurav Sahu">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS when library loads
+        window.addEventListener('load', function() {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init("OV-Z3GRE-erGYhsuZ");
+                console.log('EmailJS initialized successfully');
+            } else {
+                console.log('EmailJS library not loaded');
+            }
+        });
+    </script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/gaurav-final-logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+                <li class="current"><a class="smoothscroll" href="#intro" title="intro">Intro</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
+                <li><a class="smoothscroll" href="#certifications" title="certifications">Certifications</a></li>
+                <li><a class="smoothscroll" href="#works" title="works">Projects</a></li>
+                <li><a class="smoothscroll" href="#dsa" title="dsa">DSA Progress</a></li>
+                <li><a class="smoothscroll" href="#contact" title="contact us">Contact Me</a></li>	
+            </ul>
+
+            <ul class="header-social">
+                <li><a href="http://linkedin.com/in/gaurav-s-75073b316/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/gauravsahu891" target="_blank" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://x.com/_Gaurav_x_Sahu" target="_blank" title="Twitter/X"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/_gaxravvv_/" target="_blank" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- intro
+    ================================================== -->
+    <section id="intro" class="s-intro target-section">
+
+        <div class="row intro-content">
+
+            <div class="column large-9 mob-full intro-text">
+                <h3>Hello, I'm</h3>
+                <h1>
+                    <span class="highlight-name">Gaurav Sahu</span>
+                    <span class="intro-title">Backend Developer</span>
+                </h1>
+            </div>
+
+            <div class="intro-scroll">
+                <a href="#about" class="intro-scroll-link smoothscroll">
+                    Scroll For More
+                </a>
+            </div>
+
+            <div class="intro-grid"></div>
+            <div class="intro-pic"></div>
+
+        </div> <!-- end row -->
+
+    </section> <!-- end intro -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="about-me">
+
+            <div class="row heading-block" data-aos="fade-up">
+                <div class="column large-full">
+                    <h2 class="section-heading">About Me</h2>
+                </div>
+            </div>
+
+            <div class="row about-me__content" data-aos="fade-up">
+                <div class="column large-full about-me__text">
+                    <p class="lead">
+                    I'm a passionate student and backend developer who loves turning ideas into reality through code. My journey in software development started with a curiosity about how web applications work behind the scenes.
+                    </p>
+
+                    <p>
+                    Currently pursuing BCA at Poornima University, I'm constantly expanding my knowledge in backend development technologies. I specialize in Java, Node.js, Express.js, and MongoDB, building robust APIs and server-side applications that solve real-world problems.
+                    </p>
+
+                    <p>
+                    My approach combines theoretical knowledge from my studies with practical experience gained through personal projects and continuous learning. I believe in writing clean, well-documented code and following best practices to create scalable and maintainable applications.
+                    </p>
+
+                    <p>
+                    Looking towards the future, I'm excited about exploring emerging technologies like cloud computing, microservices architecture, and AI integration. I'm passionate about learning new frameworks and tools that can enhance my development capabilities and help me build even more innovative solutions.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row about-me__buttons">
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <button class="btn btn--stroke full-width" onclick="openCVModal()">
+                        <i class="fas fa-file-alt"></i> View CV
+                    </button>
+                </div>
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <button class="btn btn--primary full-width" onclick="downloadCV()">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
+                </div>
+            </div>
+
+        </div> <!-- end about-me -->
+
+        <div class="about-experience">
+
+            <div class="row heading-block" data-aos="fade-up">
+                <div class="column large-full">
+                    <h2 class="section-heading">Education</h2>
+                </div>
+            </div>
+
+            <div class="row about-experience__timeline">
+
+                <div class="column large-full tab-full" data-aos="fade-up">
+                    <div class="timeline">
+
+                        <div class="timeline__icon-wrap">
+                            <span class="timeline__icon timeline__icon--education"></span>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">2024 - 2027</p>
+                                <h3 class="item-title">Poornima University</h3>
+                                <h5>Bachelor of Computer Applications (BCA)</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>Currently pursuing BCA with a strong focus on computer science fundamentals, programming languages, and software development. Current CGPA: 8.20. Studying subjects including Java programming, data structures, algorithms, web development, and database management systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">2022 - 2024</p>
+                                <h3 class="item-title">Shri Bhawani Niketan Public School</h3>
+                                <h5>Higher Secondary Education</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>Completed higher secondary education with science stream, focusing on mathematics and computer science. Developed strong analytical and problem-solving skills that form the foundation for my programming career.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">2020 - 2022</p>
+                                <h3 class="item-title">Shri Bhawani Niketan Public School</h3>
+                                <h5>Secondary Education</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>Completed secondary education with excellent academic performance. Developed interest in technology and computers, which led me to pursue a career in software development.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div> <!-- end about-experience -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services ss-dark target-section">
+
+        <div class="shadow-overlay"></div>
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Capabilities</h2>
+
+                <p class="section-desc">
+                    I specialize in backend development and love building robust, scalable web applications that deliver exceptional user experiences.
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">JavaScript & Node.js</h4>
+                    <p>
+                    Proficient in modern JavaScript (ES6+) and Node.js development. I create scalable server-side applications,
+                    RESTful APIs, and real-time features using the Node.js ecosystem.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Express.js</h4>
+                    <p>
+                    Expert in building web applications and APIs using Express.js. I create clean, maintainable code with proper
+                    routing, middleware implementation, and robust error handling.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Java Development</h4>
+                    <p>
+                    Experienced in Java programming with strong understanding of object-oriented principles, data structures, and
+                    algorithms. I build robust applications using Java frameworks.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- certifications
+    ================================================== -->
+    <section id="certifications" class="s-certifications target-section">
+        
+        <div class="shadow-overlay"></div>
+        
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Certifications</h2>
+                <p class="section-desc">
+                    Professional certifications and achievements that validate my expertise in cutting-edge technologies.
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row certifications-list block-large-1-1 block-medium-1-1 block-tab-full">
+            
+            <div class="column item-certification" data-aos="fade-up">
+                <div class="item-certification__content">
+                    <div class="certification-header">
+                        <div class="certification-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="certification-info">
+                            <h4 class="item-title">Gen AI Study Jams Program (2024-25)</h4>
+                            <p class="certification-issuer">Google Cloud & Google Developer Groups</p>
+                            <p class="certification-date">2024-25</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-body">
+                        <p class="certification-description">
+                            Successfully completed Google Cloud's comprehensive Gen AI Study Jams Program, mastering essential courses covering cloud computing, AI/ML, and modern development practices. This certification demonstrates expertise in Google Cloud services, AI APIs, and generative AI application development.
+                        </p>
+                        
+                        <div class="certification-actions">
+                            <button class="btn btn--primary view-certificate" onclick="openCertificateModal()">
+                                <i class="fas fa-eye"></i> View Certificate
+                            </button>
+                            <div class="certificate-details">
+                                <span class="certificate-id">ID: GDGPUGENAI24071</span>
+                                <span class="organizer">Organizer: Manu Sharma, GDG On Campus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end certifications-list -->
+
+    </section> <!-- end s-certifications -->
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="certificate-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Google Cloud Gen AI Study Jams Certificate</h3>
+                <span class="close-modal" onclick="closeCertificateModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="certificate-preview">
+                    <img src="images/google_certificate.jpeg" alt="Google Cloud Gen AI Study Jams Certificate" class="certificate-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CV Modal -->
+    <div id="cvModal" class="cv-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Gaurav Sahu's CV</h3>
+                <sp     an class="close-modal" onclick="closeCVModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="cv-preview">
+                    <img src="images/Gaurav-resume-image.jpg" alt="Gaurav Sahu's CV" class="cv-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+
+        <div class="shadow-overlay"></div>
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Projects</h2>
+                <p class="section-desc">
+                    Here are some of my selected projects showcasing my backend development skills. Feel free to 
+                    check them out and get in touch if you'd like to discuss similar projects.
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="masonry-wrap">
+
+            <div class="masonry">
+                <div class="grid-sizer"></div>
+    
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb">
+                            <a href="#0" class="thumb-link" title="Portfolio Website" data-size="1050x700">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-code"></i>
+                                    <span>Portfolio</span>
+                                </div>
+                            </a>    
+                            <a href="#0" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+    
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Portfolio Website
+                            </h4>
+                            <p class="item-folio__cat">
+                                Web Development
+                            </p>
+                            <div class="project-technologies-integrated">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Font Awesome</span>
+                                    <span class="tech-tag">Responsive</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="item-folio__caption">
+                            <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript. Features modern design, smooth animations, and showcases my skills and projects effectively.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+    
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb">
+                            <a href="#0" class="thumb-link" title="Contact Manager" data-size="1050x700">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-address-book"></i>
+                                    <span>Contact Manager</span>
+                                </div>
+                            </a>
+                            <a href="#0" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Contact Manager
+                            </h4>
+                            <p class="item-folio__cat">
+                                Full-Stack Application
+                            </p>
+                            <div class="project-technologies-integrated">
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">Mongoose</span>
+                                    <span class="tech-tag">CRUD</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>A full-stack contact management application built with HTML, CSS, JavaScript for frontend and Node.js, Express.js, and MongoDB for backend. Features user authentication, CRUD operations, and responsive design.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+
+            </div> <!-- end masonry -->
+
+        </div> <!-- end masonry-wrap -->
+
+    </section> <!-- end s-work -->
+
+
+    <!-- DSA Section
+    ================================================== -->
+    <section id="dsa" class="s-dsa target-section">
+
+        <div class="shadow-overlay"></div>
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Data Structures & Algorithms</h2>
+                <p class="section-desc">
+                    Showcasing my problem-solving journey through GFG and Striver's DSA A2Z sheet. 
+                    Each problem represents hours of learning, debugging, and understanding core concepts.
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row dsa-content" data-aos="fade-up">
+            
+            <!-- Left Column: Problem Categories -->
+            <div class="column large-6 medium-full dsa-categories">
+                <h3>Problem Categories</h3>
+                <div class="category-cards">
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="category-card__content">
+                            <h4>Arrays & Strings</h4>
+                            <span class="problem-count" id="arrays-strings-count">7 Problems</span>
+                            <p id="arrays-strings-desc">Reverse an Array, Anagram, Sorted and Rotated Minimum, Move All Zeroes to End, Second Largest, Number of occurrence, Stock Buy and Sell.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="category-card__content">
+                            <h4>Linked Lists</h4>
+                            <span class="problem-count" id="linked-lists-count">2 Problems</span>
+                            <p id="linked-lists-desc">Basic linked list operations and problem-solving techniques.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="category-card__content">
+                            <h4>Trees & Graphs</h4>
+                            <span class="problem-count" id="trees-graphs-count">1 Problem</span>
+                            <p id="trees-graphs-desc">Fundamental tree and graph traversal algorithms.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="category-card__content">
+                            <h4>Dynamic Programming</h4>
+                            <span class="problem-count" id="dp-count">1 Problem</span>
+                            <p id="dp-desc">Basic dynamic programming concepts and problem-solving approaches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column: Problem Analysis -->
+            <div class="column large-6 medium-full dsa-analysis">
+                <h3>Problem Analysis</h3>
+                <div class="analysis-content">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" id="total-problems">15</div>
+                            <div class="stat-label">Total Problems</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="coding-score">45</div>
+                            <div class="stat-label">Coding Score</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="easy-problems">10</div>
+                            <div class="stat-label">Easy</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="medium-problems">4</div>
+                            <div class="stat-label">Medium</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="hard-problems">1</div>
+                            <div class="stat-label">Hard</div>
+                        </div>
+                    </div>
+
+                    <div class="difficulty-breakdown">
+                        <h4>Difficulty Breakdown</h4>
+                        <div class="difficulty-bar">
+                            <div class="difficulty-label">Easy</div>
+                            <div class="difficulty-progress">
+                                <div class="progress-fill easy" style="width: 67%"></div>
+                            </div>
+                            <div class="difficulty-count" id="easy-count">10</div>
+                        </div>
+                        <div class="difficulty-bar">
+                            <div class="difficulty-label">Medium</div>
+                            <div class="difficulty-progress">
+                                <div class="progress-fill medium" style="width: 27%"></div>
+                            </div>
+                            <div class="difficulty-count" id="medium-count">4</div>
+                        </div>
+                        <div class="difficulty-bar">
+                            <div class="difficulty-label">Hard</div>
+                            <div class="difficulty-progress">
+                                <div class="progress-fill hard" style="width: 6%"></div>
+                            </div>
+                            <div class="difficulty-count" id="hard-count">1</div>
+                        </div>
+                    </div>
+
+                    <div class="platform-links">
+                        <h4>My DSA Profiles</h4>
+                        <div class="platform-buttons">
+                            <a href="https://www.geeksforgeeks.org/user/gauravs992l/" target="_blank" class="platform-btn">
+                                <i class="fas fa-code"></i>
+                                <span>GFG Profile</span>
+                            </a>
+                            <a href="https://takeuforward.org/profile/Gaurav_sahu_" target="_blank" class="platform-btn">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Striver Sheet</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="last-updated">
+                        <p><small>Last updated: <span id="last-updated">Today</span></small></p>
+                    </div>
+                    <button id="refresh-dsa" class="btn btn--small" style="margin-top: 1rem; background: linear-gradient(135deg, #cf1767, #e91e63); color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">
+                        <i class="fas fa-sync-alt"></i> Refresh Data
+                    </button>
+                </div>
+            </div>
+
+        </div> <!-- end dsa-content -->
+
+    </section> <!-- end s-dsa -->
+
+
+    <!-- CTA
+    ================================================== -->
+    <!-- <section class="s-cta ss-dark"> -->
+
+        <!-- <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-desc">
+                    Ready to collaborate on exciting projects?
+                </h2>
+                    </div> -->
+        <!-- </div> <!-- end heading-block -->
+
+        <!-- <div class="row cta-content" data-aos="fade-up">
+            <div class="column large-full">
+                <p>
+                As a passionate student developer, I'm always excited to work on new projects, 
+                learn new technologies, and collaborate on amazing people. Whether you have a 
+                specific project in mind or want to discuss opportunities, let's connect and create something incredible together.
+                </p>
+
+                <a href="#contact" class="btn full-width">Let's Connect</a>
+                    </div> -->
+        <!-- </div> end ad-content
+
+    </section> end s-cta --> -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact ss-dark target-section">
+
+        <div class="row heading-block" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading">Get In Touch</h2>
+                <p class="section-desc">
+                    I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
+                </p>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+            
+            <!-- Left Column: Let's Connect -->
+            <div class="column large-6 medium-full contact-info">
+                <h3>Let's Connect</h3>
+                <p>
+                    Whether you have a project in mind, need consultation, or just want to say hello, 
+                    I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.
+                </p>
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h4>Email</h4>
+                            <a href="mailto:gauravsahu891@gmail.com">gauravsahu891@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h4>Phone</h4>
+                            <a href="tel:+919785001120">+91 97850XXXXX</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h4>Location</h4>
+                            <span>Jaipur, Rajasthan</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-section">
+                    <h4>Follow Me</h4>
+                    <div class="social-buttons">
+                        <a href="https://x.com/_Gaurav_x_Sahu" target="_blank" class="social-btn twitter" title="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="http://linkedin.com/in/gaurav-s-75073b316/" target="_blank" class="social-btn linkedin" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/gauravsahu891" target="_blank" class="social-btn github" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_gaxravvv_/" target="_blank" class="social-btn instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Send Message -->
+            <div class="column large-6 medium-full contact-form">
+                <h3>Send Message</h3>
+                <form class="contact-form__form" id="contactForm" onsubmit="sendEmail(event)">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary full-width" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="column large-full ss-copyright">
+                <span>© Copyright Gaurav Sahu 2024</span> 
+                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+            </div>            
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
