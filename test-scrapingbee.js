@@ -1,17 +1,27 @@
-const axios = require('axios');
+import axios from 'axios';
+import dotenv from 'dotenv';
 
-// Your ScrapingBee API key
-const API_KEY = '5OFUL01L8B79CW56BPQRQOA3RVQWYIPSHAZ032QUS1AJIQKD3Q8MQWXW0590PU98B5EOEU9X9NNAO4Y';
+dotenv.config();
+
+const API_KEY = process.env.SCRAPINGBEE_API_KEY;
+const BASE_URL = process.env.SCRAPINGBEE_BASE_URL || 'https://app.scrapingbee.com/api/v1/';
+const HTTPBIN_URL = process.env.HTTPBIN_URL || 'https://httpbin.org/ip';
+const GFG_PROFILE_URL = process.env.GFG_PROFILE_URL || 'https://www.geeksforgeeks.org/user/gauravs992l/';
 
 async function testScrapingBee() {
     console.log('🧪 Testing ScrapingBee API directly...\n');
+
+    if (!API_KEY) {
+        console.error('❌ SCRAPINGBEE_API_KEY is not set in .env');
+        return;
+    }
     
     try {
         console.log('1️⃣ Testing basic connection...');
-        const response = await axios.get('https://app.scrapingbee.com/api/v1/', {
+        const response = await axios.get(BASE_URL, {
             params: {
                 'api_key': API_KEY,
-                'url': 'https://httpbin.org/ip',
+                'url': HTTPBIN_URL,
                 'render_js': 'false'
             },
             timeout: 15000
@@ -23,7 +33,7 @@ async function testScrapingBee() {
         
         // Test 2: Test with a simple website
         console.log('2️⃣ Testing with a simple website...');
-        const response2 = await axios.get('https://app.scrapingbee.com/api/v1/', {
+        const response2 = await axios.get(BASE_URL, {
             params: {
                 'api_key': API_KEY,
                 'url': 'https://example.com',
@@ -38,10 +48,10 @@ async function testScrapingBee() {
         
         // Test 3: Test GFG profile (this is what we actually need)
         console.log('3️⃣ Testing GFG profile scraping...');
-        const response3 = await axios.get('https://app.scrapingbee.com/api/v1/', {
+        const response3 = await axios.get(BASE_URL, {
             params: {
                 'api_key': API_KEY,
-                'url': 'https://www.geeksforgeeks.org/user/gauravs992l/',
+                'url': GFG_PROFILE_URL,
                 'render_js': 'true',
                 'wait': '5000'
             },

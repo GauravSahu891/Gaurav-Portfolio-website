@@ -1,6 +1,9 @@
-const axios = require('axios');
-const dns = require('dns');
-const { promisify } = require('util');
+import axios from 'axios';
+import dns from 'dns';
+import { promisify } from 'util';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const resolve4 = promisify(dns.resolve4);
 const resolveCname = promisify(dns.resolveCname);
@@ -22,7 +25,7 @@ async function testNetworkConnectivity() {
     // Test 2: Test basic internet connectivity
     console.log('2️⃣ Testing Basic Internet...');
     try {
-        const response = await axios.get('https://httpbin.org/ip', { timeout: 10000 });
+        const response = await axios.get(process.env.HTTPBIN_URL || 'https://httpbin.org/ip', { timeout: 10000 });
         console.log('✅ Basic internet working');
         console.log('📊 Your IP:', response.data.origin);
     } catch (error) {
@@ -91,7 +94,7 @@ async function testNetworkConnectivity() {
     // Test 6: Test if it's a specific API endpoint issue
     console.log('6️⃣ Testing API Endpoint...');
     try {
-        const response = await axios.get('https://app.scrapingbee.com/api/v1/', { 
+        const response = await axios.get(process.env.SCRAPINGBEE_BASE_URL || 'https://app.scrapingbee.com/api/v1/', { 
             timeout: 15000,
             validateStatus: () => true
         });
@@ -105,11 +108,18 @@ async function testNetworkConnectivity() {
 // Test with your API key
 async function testWithAPIKey() {
     console.log('\n🔑 Testing with Your API Key...\n');
-    
+
+    const apiKey = process.env.SCRAPINGBEE_API_KEY;
+    const baseUrl = process.env.SCRAPINGBEE_BASE_URL || 'https://app.scrapingbee.com/api/v1/';
+
+    if (!apiKey) {
+        console.log('❌ SCRAPINGBEE_API_KEY is not set in .env');
+        return;
+    }
     try {
-        const response = await axios.get('https://app.scrapingbee.com/api/v1/', {
+        const response = await axios.get(baseUrl, {
             params: {
-                'api_key': '5OFUL01L8B79CW56BPQRQOA3RVQWYIPSHAZ032QUS1AJIQKD3Q8MQWXW0590PU98B5EOEU9X9NNAO4Y',
+                'api_key': apiKey,
                 'url': 'https://httpbin.org/ip',
                 'render_js': 'false'
             },

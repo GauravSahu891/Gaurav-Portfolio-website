@@ -70,7 +70,7 @@ body {
 body {
   background: #050505;
   font-family: "Lora", serif;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.882;
@@ -2191,7 +2191,7 @@ input::-moz-focus-inner {
 
 .about-me__text {
   -webkit-columns: 2 360px;
-  -moz-columns: 2 360px;
+  -moz-columns: 0 360px;
   columns: 2 360px;
   column-gap: 64px;
 }
@@ -2872,12 +2872,141 @@ input::-moz-focus-inner {
 .item-folio__thumb .thumb-link {
   display: block;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .item-folio__thumb .thumb-link::before,
 .item-folio__thumb .thumb-link::after,
 .item-folio__thumb .thumb-link .item-folio__project-link {
   transition: all 0.5s ease-in-out;
+}
+
+.project-embed {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.project-embed__frame {
+  width: 100%;
+  height: 240px;
+  border: 0;
+  display: block;
+  pointer-events: none; /* allow clicking the card to open the link */
+  background: #fff;
+}
+
+.project-embed__badge {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(6px);
+}
+
+.project-embed__badge i {
+  color: #ff5ca8;
+}
+
+.project-mockup {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0f1220;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.project-mockup__topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-mockup__dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.project-mockup__title {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.project-mockup__content {
+  padding: 14px;
+}
+
+.project-mockup__search {
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 14px;
+}
+
+.project-mockup__list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.project-mockup__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-mockup__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(207, 23, 103, 0.5);
+  box-shadow: 0 10px 25px rgba(207, 23, 103, 0.15);
+}
+
+.project-mockup__line {
+  flex: 1;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.project-mockup__footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.project-mockup__footer i {
+  color: #fff;
 }
 
 .item-folio__thumb .thumb-link::before {
@@ -2942,6 +3071,23 @@ input::-moz-focus-inner {
 .item-folio__thumb:hover a::after {
   opacity: 1;
   visibility: visible;
+}
+
+.item-folio__thumb:hover .thumb-link::before,
+.item-folio__thumb:hover .thumb-link::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thumb-link--external {
+  position: relative;
+}
+
+.thumb-link__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
 }
 
 .item-folio__thumb:hover .item-folio__project-link {

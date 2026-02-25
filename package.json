@@ -14,10 +14,13 @@
     "api"
   ],
   "author": "Gaurav Sahu",
+  "type": "module",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
+    "axios": "^1.13.5",
     "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
     "node-fetch": "^2.7.0"
   },
   "devDependencies": {

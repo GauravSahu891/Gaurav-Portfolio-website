@@ -151,21 +151,32 @@
             $folioItems = $('.item-folio');
 
         // get items
-        $folioItems.each( function(i) {
+        $folioItems.each( function() {
 
             var $folio = $(this),
                 $thumbLink =  $folio.find('.thumb-link'),
                 $title = $folio.find('.item-folio__title'),
                 $caption = $folio.find('.item-folio__caption'),
                 $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                $captionText = $.trim($caption.html()),
-                $href = $thumbLink.attr('href'),
-                $size = $thumbLink.data('size').split('x'),
+                $captionText = $.trim($caption.html());
+
+            // Skip items explicitly opted-out (external links, embedded previews, etc.)
+            if ($thumbLink.attr('data-pswp') === 'false') {
+                return;
+            }
+
+            var size = $thumbLink.data('size');
+            var href = $thumbLink.attr('href');
+            if (!size || !href || href === '#0') {
+                return;
+            }
+
+            var $size = String(size).split('x'),
                 $width  = $size[0],
                 $height = $size[1];
         
             var item = {
-                src  : $href,
+                src  : href,
                 w    : $width,
                 h    : $height
             }
@@ -174,16 +185,21 @@
                 item.title = $.trim($titleText + $captionText);
             }
 
+            $folio.data('pswp-index', items.length);
             items.push(item);
         });
 
         // bind click event
-        $folioItems.each(function(i) {
+        $folioItems.each(function() {
+            var index = $(this).data('pswp-index');
+            if (typeof index === 'undefined') {
+                return;
+            }
 
             $(this).find('.thumb-link').on('click', function(e) {
                 e.preventDefault();
                 var options = {
-                    index: i,
+                    index: index,
                     showHideOpacity: true
                 }
 
